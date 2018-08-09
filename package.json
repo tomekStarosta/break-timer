@@ -1,7 +1,7 @@
 {
-  "name": "js-app-boilerplate",
+  "name": "break-timer",
   "version": "1.0.0",
-  "description": "Simple template for developing and deploying basic JS apps.",
+  "description": "Simple break timer app.",
   "main": "main.js",
   "scripts": {
     "dev": "webpack-dev-server --watch --config webpack.dev.js",
@@ -11,22 +11,8 @@
     "type": "git",
     "url": "git+https://github.com/tomekStarosta/basic-js-boilerplate.git"
   },
-  "keywords": [
-    "JavaScript",
-    "Webpack",
-    "Babel",
-    "SASS",
-    "CSS",
-    "HTML",
-    "Template",
-    "Boilerplate"
-  ],
   "author": "Tomasz Starosta",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/tomekStarosta/basic-js-boilerplate/issues"
-  },
-  "homepage": "https://github.com/tomekStarosta/basic-js-boilerplate#readme",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
