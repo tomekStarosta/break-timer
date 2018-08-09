@@ -1,0 +1,25 @@
+.heading {
+  font-size: 2.4rem;
+  margin: 2rem 0;
+
+  &--large {
+    font-size: 3.5rem;
+  }
+
+  &--small {
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+
+  &--my-small {
+    margin: 1.3rem 0;
+  }
+
+  &--mt-small {
+    margin-top: 1.3rem;
+  }
+
+  &--mb-medium {
+    margin-bottom: 1.5rem;
+  }
+}

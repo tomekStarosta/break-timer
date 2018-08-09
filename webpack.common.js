@@ -28,7 +28,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Boilerplate for JS apps',
+      title: 'Break Timer',
       template: 'src/template.html'
     })
   ]

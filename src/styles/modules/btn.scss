@@ -1,0 +1,52 @@
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: .5rem 1.2rem;
+  border: 1px solid #999;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all .12s ease-out;
+
+  &--thin {
+    padding: .4rem .7rem;
+  }
+
+  &--pos-tr {
+    position: absolute;
+    top: 5px;
+    right: 25px;
+  }
+
+  &--mr-1 {
+    margin-right: 5px;
+  }
+
+  &:link,
+  &:visited {
+    color: $textMain;
+    background-color: #fff;
+  }
+
+  &--green:hover,
+  &--green:active {
+    color: #fff;
+    background-color: $themeGreen;
+    border-color: $themeGreen;
+  }
+
+  &--orange:hover,
+  &--orange:active {
+    color: #fff;
+    background-color: $themeOrange;
+    border-color: $themeOrange;
+  }
+
+  &--blue:hover,
+  &--blue:active {
+    color: #fff;
+    background-color: $themeBlue;
+    border-color: $themeBlue;
+  }
+}
+
