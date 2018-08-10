@@ -1,0 +1,13 @@
+.tingle-modal {
+
+  & > &-box {
+    width: 32%;
+    margin-bottom: 0;
+    margin-top: 7%;
+  }
+
+  & > &-box > &-box__content {
+    padding: 2rem;
+  }
+
+}

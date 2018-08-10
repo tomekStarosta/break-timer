@@ -1,11 +1,12 @@
 // import stylesheet
 import '../styles/index.scss';
 
-// import timer object
-import timer from './modules/timer';
-// import ui object
+// import ui obj
 import ui from './modules/ui';
+// import controller obj
+import ctrl from './modules/controller';
 
-document.getElementById('js--start-btn').addEventListener('click', timer.start);
-document.getElementById('js--stop-btn').addEventListener('click', timer.stop);
-document.getElementById('js--reset-btn').addEventListener('click', ui.openResetModal);
+document.addEventListener('DOMContentLoaded', ctrl.initApp);
+document.getElementById('js--start-btn').addEventListener('click', ctrl.startTimer);
+document.getElementById('js--stop-btn').addEventListener('click', ctrl.stopTimer);
+document.getElementById('js--reset-btn').addEventListener('click', ui.openModal);

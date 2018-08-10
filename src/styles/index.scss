@@ -1,6 +1,9 @@
 // import Libre Franklin font
 @import url('https://fonts.googleapis.com/css?family=Libre+Franklin:300,400');
 
+@import '../../node_modules/tingle.js/dist/tingle.min.css';
+@import '../../node_modules/rangeslider-pure/dist/range-slider.css';
+
 // import global stylesheet
 @import 'base/variables';
 @import 'base/global';
@@ -10,3 +13,4 @@
 @import 'modules/heading';
 @import 'modules/btn';
 @import 'modules/output';
+@import 'modules/tingle-modal';
