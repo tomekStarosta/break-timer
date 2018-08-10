@@ -10,4 +10,13 @@
     padding: 2rem;
   }
 
+  &__closeIcon {
+    font-size: 4rem;
+    color: #ddd;
+    transition: all .2s ease-out;
+  }
+
+  &__closeIcon:hover {
+    color: #fff;
+  }
 }

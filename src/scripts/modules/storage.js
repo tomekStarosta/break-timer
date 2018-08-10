@@ -28,6 +28,11 @@ const storage = {
 
   updateRemainingBreak: function(seconds) {
     localStorage.setItem('remainingBreak', seconds);
+  },
+
+  setShiftLength: function(hrs) {
+    localStorage.setItem('shiftLength', hrs);
+    localStorage.removeItem('remainingBreak');
   }
 
 }

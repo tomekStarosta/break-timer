@@ -30,7 +30,7 @@ const ctrl = {
       ctrl.breakStartStamp = Date.now();
       ctrl.timerActive = true;
       ui.clearOutputDiv();
-      ui.displayMessage('The timer is running.');
+      ui.displayMessage('The timer is running...');
     }
   },
 
@@ -55,6 +55,11 @@ const ctrl = {
     ui.clearOutputDiv();
 
     storage.updateRemainingBreak(ctrl.remainingBreak); 
+  },
+
+  resetTimer: function(hrs) {
+    storage.setShiftLength(hrs);
+    ctrl.initApp();
   }
 
 }

@@ -15,19 +15,7 @@ const ui = {
     footer: true,
     stickyFooter: false,
     closeMethods: ['overlay', 'button', 'escape'],
-    closeLabel: "Close",
-    onOpen: function() {
-        console.log('modal open');
-    },
-    onClose: function() {
-        console.log('modal closed');
-    },
-    beforeClose: function() {
-        // here's goes some logic
-        // e.g. save content before closing the modal
-        return true; // close the modal
-        return false; // nothing happens
-    }
+    closeLabel: "Close"
   },
 
   initModal: function() {
@@ -46,6 +34,21 @@ const ui = {
 
     ui.inputSlider = document.querySelector('.range-slider');
     ui.rangeHours = document.querySelector('.range-hours');
+
+    ui.modalInstance.addFooterBtn('Close', 'btn btn--orange', function() {
+      
+      ui.modalInstance.close();
+
+    });
+
+    ui.modalInstance.addFooterBtn('Reset', 'btn btn--green', function() {
+
+      ui.modalInstance.close();      
+
+      ctrl.resetTimer(ui.inputSlider.value);
+    });
+
+    
   },
 
   initRangeslider: function(shiftLen) {
@@ -112,7 +115,13 @@ const ui = {
       const breakOutput = document.createElement('h3');
       breakOutput.classList.add('heading', 'heading--small');
       const breakMinutes = Math.floor(breakSeconds / 60);
-      breakOutput.textContent = `${ breakMinutes }:${ breakSeconds % 60 }`;
+      let secondsDisplay = (breakSeconds % 60).toString();
+
+      if (secondsDisplay.length === 1) {
+        secondsDisplay = '0' + secondsDisplay;
+      }
+
+      breakOutput.textContent = `${ breakMinutes }:${ secondsDisplay }`;
 
       const updateBtn = document.createElement('a');
       updateBtn.classList.add('btn', 'btn--green', 'btn--mr-1');
