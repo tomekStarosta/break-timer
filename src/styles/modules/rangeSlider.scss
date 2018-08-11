@@ -1,0 +1,11 @@
+.rangeSlider {
+  margin-top: 3rem;
+
+  &.rangeSlider__horizontal {
+    background-color: #eee;
+  }
+
+  & > &__fill {
+    background-color: $themeBlue;
+  } 
+}

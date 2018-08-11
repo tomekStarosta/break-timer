@@ -22,14 +22,15 @@ const ui = {
     ui.modalInstance = new tingle.modal(ui.modalOptions);
 
     ui.modalInstance.setContent(`
-      <h1 class="heading heading--small heading--mt-none">Reset Your Timer</h1>
-      <p>How long is your shift today?</p>
+      <h1 class="heading heading--medium text--centered text--mt-0">Reset Your Timer</h1>
+      <p class="text">Use the slider below to set your shift length.</p>
       <input
       <input
         class="range-slider"
         type="range"
       />
-      <div class="range-hours heading"></div>
+      <div class="range-hours heading text--centered text--mb-0 text--mt-3"></div>
+      <p class="text text--orange text--mt-1-5">Saving changes will discard any current break progress.</p>
     `);
 
     ui.inputSlider = document.querySelector('.range-slider');
@@ -41,7 +42,7 @@ const ui = {
 
     });
 
-    ui.modalInstance.addFooterBtn('Reset', 'btn btn--green', function() {
+    ui.modalInstance.addFooterBtn('Save Changes', 'btn btn--blue btn--float-r', function() {
 
       ui.modalInstance.close();      
 
@@ -79,7 +80,7 @@ const ui = {
         ui.mainHeading.classList.remove('heading--red');
       }
       
-      ui.mainHeading.textContent = 'Break Timer';
+      ui.mainHeading.textContent = 'Remaining Break';
     } else {
       ui.mainHeading.textContent = 'Overbreak';
       ui.mainHeading.classList.add('heading--red');
@@ -123,11 +124,11 @@ const ui = {
 
       breakOutput.textContent = `${ breakMinutes }:${ secondsDisplay }`;
 
-      const updateBtn = document.createElement('a');
+      const updateBtn = document.createElement('button');
       updateBtn.classList.add('btn', 'btn--green', 'btn--mr-1');
       updateBtn.textContent = 'Update';
 
-      const discardBtn = document.createElement('a');
+      const discardBtn = document.createElement('button');
       discardBtn.classList.add('btn', 'btn--orange');
       discardBtn.textContent = 'Discard';
 
